@@ -1,38 +1,173 @@
-.App {
+.container {
+  position: relative;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 15vh;
+  border: 4px solid #f2cc8f;
+  border-radius: 10px;
+  background-color: #f4f1de;
+  background-color: white;
+}
+
+.app-title {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 30vw;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 40px;
   text-align: center;
+  color: white;
+  transform: translateX(-50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* css for list that show us todos */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  height: 80%;
+  padding: 30px 0;
+  margin: 0;
+  list-style: none;
+}
+
+li[class^="todo-list__items"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 5px 10px;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 5px;
   color: white;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.295);
+  transition: all 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list__items:nth-of-type(odd) {
+  background-color: #f2cc8f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-list__items:nth-of-type(even) {
+  background-color: #3d405b;
+}
+
+.todo-list__items:hover {
+  background-color: #81b29a;
+  transform: translateY(-5%);
+}
+
+/* todo를 클릭 시 완료 처리 할 클래스 */
+
+.todo-list__items-done {
+  background-color: gainsboro;
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+/* 삭제 버튼에 마우스를 올렸을 때 색 변경 */
+.todo-list__items-hover {
+  background-color: #e07a5f;
+}
+
+.todo-list__item {
+  margin: 0 auto;
+  /* 마우스 클릭 안되게 함. 클릭되면 js로 설정한 클래스를 span이 가져갈 수 있어서 */
+  pointer-events: none;
+}
+
+.todo-list__btns {
+  background: white;
+  border: none;
+  border-radius: 2px;
+  z-index: 10;
+  transition: 0.1s ease-in;
+}
+
+.todo-list__btns:hover {
+  transform: scale(120%);
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
+  .app-title {
+    width: 50vw;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  .app-title {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 40%;
+  }
+  .app-title {
+    width: 30vw;
+  }
+}
+
+/* css for form that can help us to create todos */
+
+.todo-create {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 5px;
+  border: 2px solid #3d405b;
+  border-radius: 5px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.todo-create__input {
+  width: 70%;
+  margin-left: 3vw;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #3d405b;
+  font-size: 18px;
+  color: #3d405b;
+  text-align: center;
+  outline: none;
+}
+
+.todo-create__input:focus::placeholder {
+  color: transparent;
+}
+
+.todo-create__btn {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background: #3d405b;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f4f1de;
+}
+
+.todo-create__btn:hover {
+  background-color: #f2cc8f;
+}
+
+.todo-create__btn:active {
+  background-color: #f2cc8f;
 }
