@@ -62,13 +62,13 @@
 - `TodoList.js`: `App.js`에서 생성한 **todo**들을 화면에 구현해주는 파일
 - `CreateTodo.js`: **todo**들을 생성할 수 있게 해주는 form을 구현한 파일
 
-```mermaid
+<div class="mermaid">
 graph RL
 index.js --> index.html
 App.js --> index.js
 TodoList.js --> App.js
 CreateTodo.js --> App.js
-```
+</div>
 
 ## 5. Getting Started
 
@@ -138,7 +138,7 @@ CreateTodo.js --> App.js
 <summary><b>다이어그램으로 확인하기</b></summary>
 <div markdown="1">
 
-```mermaid
+<div class="mermaid">
 sequenceDiagram;
 participant LocalStorage;
 participant App.js;
@@ -170,7 +170,8 @@ App.js ->> TodoList.js: todos를 전달;
 Note right of TodoList.js: todos를 HTML 요소로 변경;
 TodoList.js ->> App.js: 생성한 요소 전달;
 Note left of App.js: 화면에 렌더링;
-```
+
+</div>
 
 </div>
 </details>
