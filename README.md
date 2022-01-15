@@ -139,37 +139,37 @@ CreateTodo.js --> App.js
 <div markdown="1">
 
 ```mermaid
-sequenceDiagram
-participant LocalStorage
-participant App.js
-participant CreateTodo.js
-participant TodoList.js
+sequenceDiagram;
+participant LocalStorage;
+participant App.js;
+participant CreateTodo.js;
+participant TodoList.js;
 
-App.js ->> LocalStorage: 저장된 todos 확인 요청
-LocalStorage ->> App.js: todos가 있다면 전달
-Note left of LocalStorage: todos가 있는지 확인
-App.js ->> TodoList.js: todos를 전달
-Note right of TodoList.js: todos를 HTML 요소로 변경
-TodoList.js ->> App.js: 생성한 요소 전달
-Note left of App.js: 화면에 렌더링
-Note right of CreateTodo.js: 새로운 todo 입력
-CreateTodo.js ->> App.js: 생성한 todo 전달
-Note left of App.js: todos의 상태변경
-App.js ->> LocalStorage: 변경된 todos 전달
-Note left of LocalStorage: todos를 저장
-App.js ->> TodoList.js: todos를 전달
-Note right of TodoList.js: todos를 HTML 요소로 변경
-TodoList.js ->> App.js: 생성한 요소 전달
-Note left of App.js: 화면에 렌더링
-TodoList.js ->> App.js: 삭제한 todo가 무엇인지 전달
-Note right of TodoList.js: todo 삭제 요청
-Note left of App.js: todos의 상태변경
-App.js ->> LocalStorage: 변경된 todos 전달
-Note left of LocalStorage: todos를 저장
-App.js ->> TodoList.js: todos를 전달
-Note right of TodoList.js: todos를 HTML 요소로 변경
-TodoList.js ->> App.js: 생성한 요소 전달
-Note left of App.js: 화면에 렌더링
+App.js ->> LocalStorage: 저장된 todos 확인 요청;
+LocalStorage ->> App.js: todos가 있다면 전달;
+Note left of LocalStorage: todos가 있는지 확인;
+App.js ->> TodoList.js: todos를 전달;
+Note right of TodoList.js: todos를 HTML 요소로 변경;
+TodoList.js ->> App.js: 생성한 요소 전달;
+Note left of App.js: 화면에 렌더링;
+Note right of CreateTodo.js: 새로운 todo 입력;
+CreateTodo.js ->> App.js: 생성한 todo 전달;
+Note left of App.js: todos의 상태변경;
+App.js ->> LocalStorage: 변경된 todos 전달;
+Note left of LocalStorage: todos를 저장;
+App.js ->> TodoList.js: todos를 전달;
+Note right of TodoList.js: todos를 HTML 요소로 변경;
+TodoList.js ->> App.js: 생성한 요소 전달;
+Note left of App.js: 화면에 렌더링;
+TodoList.js ->> App.js: 삭제한 todo가 무엇인지 전달;
+Note right of TodoList.js: todo 삭제 요청;
+Note left of App.js: todos의 상태변경;
+App.js ->> LocalStorage: 변경된 todos 전달;
+Note left of LocalStorage: todos를 저장;
+App.js ->> TodoList.js: todos를 전달;
+Note right of TodoList.js: todos를 HTML 요소로 변경;
+TodoList.js ->> App.js: 생성한 요소 전달;
+Note left of App.js: 화면에 렌더링;
 ```
 
 </div>
