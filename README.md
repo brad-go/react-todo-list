@@ -62,6 +62,14 @@
 - `TodoList.js`: `App.js`에서 생성한 **todo**들을 화면에 구현해주는 파일
 - `CreateTodo.js`: **todo**들을 생성할 수 있게 해주는 form을 구현한 파일
 
+```mermaid
+graph RL
+index.js --> index.html
+App.js --> index.js
+TodoList.js --> App.js
+CreateTodo.js --> App.js
+```
+
 ## 5. Getting Started
 
 <!-- 작성한 코드를 실행하기 전 설치해야 할 파일 이나 패키지 등 -->
@@ -125,6 +133,48 @@
 ## 7. 핵심 기능
 
 이 프로젝트의 핵심 기능은 할 일(todo)를 생성하고, 읽어오고, 삭제하는 기능입니다. 간단한 클릭만으로 동작할 수 있게 생성했습니다. 이 앱은 로컬 스토리지를 이용해서 todo를 저장하고 읽어옵니다.
+
+<details>
+<summary><b>다이어그램으로 확인하기</b></summary>
+<div markdown="1">
+
+```mermaid
+sequenceDiagram
+participant LocalStorage
+participant App.js
+participant CreateTodo.js
+participant TodoList.js
+
+App.js ->> LocalStorage: 저장된 todos 확인 요청
+LocalStorage ->> App.js: todos가 있다면 전달
+Note left of LocalStorage: todos가 있는지 확인
+App.js ->> TodoList.js: todos를 전달
+Note right of TodoList.js: todos를 HTML 요소로 변경
+TodoList.js ->> App.js: 생성한 요소 전달
+Note left of App.js: 화면에 렌더링
+Note right of CreateTodo.js: 새로운 todo 입력
+CreateTodo.js ->> App.js: 생성한 todo 전달
+Note left of App.js: todos의 상태변경
+App.js ->> LocalStorage: 변경된 todos 전달
+Note left of LocalStorage: todos를 저장
+App.js ->> TodoList.js: todos를 전달
+Note right of TodoList.js: todos를 HTML 요소로 변경
+TodoList.js ->> App.js: 생성한 요소 전달
+Note left of App.js: 화면에 렌더링
+TodoList.js ->> App.js: 삭제한 todo가 무엇인지 전달
+Note right of TodoList.js: todo 삭제 요청
+Note left of App.js: todos의 상태변경
+App.js ->> LocalStorage: 변경된 todos 전달
+Note left of LocalStorage: todos를 저장
+App.js ->> TodoList.js: todos를 전달
+Note right of TodoList.js: todos를 HTML 요소로 변경
+TodoList.js ->> App.js: 생성한 요소 전달
+Note left of App.js: 화면에 렌더링
+```
+
+</div>
+</details>
+<br>
 
 1. 앱이 실행되면 로컬 스토리지에 저장한 데이터가 있는지 확인하고 있다면 화면에 렌더링 합니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/App.js#L29)
 2. 사용자가 원하는 할 일을 입력하고 양식 제출을 통해서 새로운 **할 일을 화면에 기록**할 수 있습니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/components/CreateTodo.js#L4)
@@ -418,3 +468,18 @@ const handleToggleList = (e) => {
 
 &nbsp;나의 리액트 첫 프로젝트로 자바스크립트로 만들어봤던 **투두리스트**를 리액트로 만들어 봤다. HTML을 자바스크립트 안에서 간단하게 조작하고 만들 수 있어서 요소를 배치하고 화면을 구성하는 것은 정말 편하다고 느꼈다. 하지만 아직 리액트를 잘 알지 못해서 오히려 자바스크립트에서 쉽게 다루던 함수들을 조작하기 어려웠던 것 같다.
 &nbsp;기본적인 react의 동작과 react hooks에 대해서 조금 더 공부가 필요할 것 같다. 자바스크립트의 ES6문법도 조금 더 잘 알게 되면 더 쉽게 사용할 수 있을 것 같다.
+
+### Contact
+
+- :email: Email: dhjk35@gmail.com
+- Tech Blog: https://velog.io/@brad
+
+<a href="https://instagram.com/brad_go95">
+<img 
+  src="http://img.shields.io/badge/-Instagram-white?style=flat&logo=Instagram&link=https://instagram.com/alpox.dev/" style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a>
+<a href="https://github.com/brad-go">
+<img 
+    src="http://img.shields.io/badge/-Github-black?style=flat&logo=github&link=https://alpox.kr"
+    style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a>
