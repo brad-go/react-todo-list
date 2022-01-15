@@ -1,28 +1,24 @@
 # [React] 리액트로 만드는 TODO LIST
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbrad-go%2Freact-todo-list&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 &nbsp;나의 리액트 첫 프로젝트로 자바스크립트로 만들어봤던 **투두리스트**를 리액트로 만들어 봤다. HTML을 자바스크립트 안에서 간단하게 조작하고 만들 수 있어서 요소를 배치하고 화면을 구성하는 것은 정말 편하다고 느꼈다. 하지만 아직 리액트를 잘 알지 못해서 오히려 자바스크립트에서 쉽게 다루던 함수들을 조작하기 어려웠던 것 같다.
 
 <!-- 프로젝트에 대한 간단한 설명 -->
 
+- DEMO 링크: https://brad-go.github.io/react-todo-list
+
 ## 1. Description
 
 - 목적: **Todo List**를 만들면서 리액트에 익숙해지기
-- DEMO 링크: https://brad-go.github.io/react-todo-list
+- 개인 프로젝트
 - 제작 기간: 2021.01.11 ~ 2021.01.15
 
 <!-- 사용된 기술 -->
 
 ## 2. Built with
 
-<img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/CSS-blue?style=flat-square&logo=CSS3&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/JAVASCRIPT-yellow?style=flat-square&logo=JAVASCRIPT&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=REACT&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/npm.js-CB3837?style=flat-square&logo=npm&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=VISUAL STUDIO CODE&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=GIT&logoColor=white" align="center"/>
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white" align="center"/>
+<img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat-square&logo=CSS3&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/JAVASCRIPT-yellow?style=flat-square&logo=JAVASCRIPT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=REACT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/npm.js-CB3837?style=flat-square&logo=npm&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=VISUAL STUDIO CODE&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=GIT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white" align="center"/>
 
 ######
 
