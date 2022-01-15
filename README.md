@@ -2,11 +2,21 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbrad-go%2Freact-todo-list&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-&nbsp;나의 리액트 첫 프로젝트로 자바스크립트로 만들어봤던 **투두리스트**를 리액트로 만들어 봤다. HTML을 자바스크립트 안에서 간단하게 조작하고 만들 수 있어서 요소를 배치하고 화면을 구성하는 것은 정말 편하다고 느꼈다. 하지만 아직 리액트를 잘 알지 못해서 오히려 자바스크립트에서 쉽게 다루던 함수들을 조작하기 어려웠던 것 같다.
-
 <!-- 프로젝트에 대한 간단한 설명 -->
 
 - DEMO 링크: https://brad-go.github.io/react-todo-list
+
+## Table of Contents
+
+- [Description](#1-description)
+- [Built with](#2-built-with)
+- [Roadmap](#3-roadmap)
+- [File Description](#4-file-description)
+- [Getting Started](#5-getting-started)
+- [Usage](#6-usage)
+- [핵심 기능](#7-핵심-기능)
+- [Trouble Shooting](#8-trouble-shooting)
+- [회고 / 느낀점](#9-회고-및-느낀점)
 
 ## 1. Description
 
@@ -18,8 +28,7 @@
 
 ## 2. Built with
 
-<img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white" align="center"/> 
-<img src="https://img.shields.io/badge/CSS-blue?style=flat-square&logo=CSS3&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/JAVASCRIPT-yellow?style=flat-square&logo=JAVASCRIPT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=REACT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/npm.js-CB3837?style=flat-square&logo=npm&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=VISUAL STUDIO CODE&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=GIT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white" align="center"/>
+<img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat-square&logo=CSS3&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/JAVASCRIPT-yellow?style=flat-square&logo=JAVASCRIPT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=REACT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/npm.js-CB3837?style=flat-square&logo=npm&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=VISUAL STUDIO CODE&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=GIT&logoColor=white" align="center"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white" align="center"/>
 
 ######
 
@@ -47,6 +56,8 @@
 
 ## 4. File Description
 
+#### Components
+
 - `App.js`: HTML 구조의 큰 뼈대와 이 프로젝트의 핵심인 **todo**들을 관리하는 파일
 - `TodoList.js`: `App.js`에서 생성한 **todo**들을 화면에 구현해주는 파일
 - `CreateTodo.js`: **todo**들을 생성할 수 있게 해주는 form을 구현한 파일
@@ -64,34 +75,38 @@
 
 #### Installation
 
-1. Clone this repo
+1. 프로젝트의 디렉토리로 이동하기
    ```
-    git clone https://github.com/brad-go/Gardner.git
+    cd todo-list
    ```
-2. Node.js
+2. Clone this repo
+   ```
+    git clone https://github.com/brad-go/react-todo-list.git
+   ```
+3. Node.js
    [Node.js설치하기](https://nodejs.org/ko/)
    설치 후에 터미널에서 아래와 같이 입력을 통해 설치가 되었는지 확인할 수 있습니다.
    ```
     node --version
    ```
-3. npm
+4. npm
    Node.js를 설치하면 npm이 자동으로 설치되어 있을 것이다. 아래의 입력을 통해 확인해 볼 수 있습니다.
    ```
     npm --version
+   ```
+5. node module 설치
+   실행에 필요한 node module들을 다운로드 합니다.
+   ```
+    npm install
+   ```
+6. 프로젝트 실행하기
+   ```
+    npm start
    ```
 
 <!-- 작성한 코드를 어떻게 실행해야 하는지에 대한 가이드 라인 -->
 
 ## 6. Usage
-
-1. 프로젝트의 디렉토리로 이동하기
-   ```
-    cd todo-list
-   ```
-2. 프로젝트 실행하기
-   ```
-    npm start
-   ```
 
 <div align="center" justify="space-between">
   <img src="./public/imgs/basic.png" width="45%">
@@ -112,8 +127,8 @@
 이 프로젝트의 핵심 기능은 할 일(todo)를 생성하고, 읽어오고, 삭제하는 기능입니다. 간단한 클릭만으로 동작할 수 있게 생성했습니다. 이 앱은 로컬 스토리지를 이용해서 todo를 저장하고 읽어옵니다.
 
 1. 앱이 실행되면 로컬 스토리지에 저장한 데이터가 있는지 확인하고 있다면 화면에 렌더링 합니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/App.js#L29)
-2. 사용자가 원하는 할 일을 입력하고 양식 제출을 통해서 새로운 할 일을 화면에 저장할 수 있습니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/components/CreateTodo.js#L4)
-3. 'x버튼'을 클릭해서 할 일을 삭제할 수 있습니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/App.js#L12)
+2. 사용자가 원하는 할 일을 입력하고 양식 제출을 통해서 새로운 **할 일을 화면에 기록**할 수 있습니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/components/CreateTodo.js#L4)
+3. 'x버튼'을 클릭해서 **할 일을 삭제**할 수 있습니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/App.js#L12)
 4. 양식 제출이나 삭제를 통해 todo가 변경되면 localStarage에 저장합니다. [📌 코드 확인](https://github.com/brad-go/react-todo-list/blob/master/src/App.js#L38)
 
 ## 8. Trouble Shooting
@@ -124,12 +139,12 @@
 
 ##### 원하던 동작
 
-- input을 통해서 제출이 일어나면 화면에 렌더링 됨과 동시에 로컬 스토리지에 저장되기를 원했습니다.
+- `input`을 통해서 제출이 일어나면 화면에 렌더링 됨과 동시에 로컬 스토리지에 저장되기를 원했습니다.
 
 ##### 문제
 
-- 로컬 스토리지에 저장은 되지만 저장이나 삭제 시에 setter 함수로 업데이트를 해줘도 제출이 한번 더 일어나기 전까지 로컬 스토리지에 저장하지 못했습니다.
-- 즉, 마지막에 추가한 todo는 로컬스토리지에 추가하지 못했습니다.
+- 로컬 스토리지에 저장은 되지만 저장이나 삭제 시에 `setter 함수`로 업데이트를 해줘도 제출이 한번 더 일어나기 전까지 로컬 스토리지에 저장하지 못했습니다.
+- 즉, 마지막에 추가한 `todo`는 로컬스토리지에 추가하지 못했습니다.
 
 <details>
 <summary><b>기존 코드</b></summary>
@@ -253,7 +268,7 @@ setter 함수를 통해서 인풋값을 초기값으로 변경해도 인풋창�
 - 나는 setter함수를 통해서 state를 변경하고는 있었지만, 이 값이 input에 연결되어 있지 않아서 아무리 해도 `input`값을 비울 수 없었던 것입니다.
 - **핵심**: `input` 의 상태를 관리할 때에는 `input` 태그의 value 값도 설정해줘야 한다는 것을 알았습니다. 그렇게 해야, 상태가 바뀌었을때 `input` 의 내용도 업데이트 된다는 것을...!
 
-##### 바뀐 코드
+##### 개선된 코드
 
 ```javascript
 const CreateTodo = (props) => {
@@ -279,6 +294,43 @@ const CreateTodo = (props) => {
 }
 ```
 
+</div>
+</details>
+
+<details>
+<summary><b>무한 렌더링 문제</b></summary>
+<div markdown="1">
+
+#### 원하던 동작
+
+- 로컬스토리지에 가지고 있는 todo들이 있으면 setter 함수를 이용해서 todos를 변경하려고 했습니다.
+
+#### 문제
+
+`Too many re-renders. React limits the number of renders to prevent an infinite loop.`
+
+- 처음에는 `if문`을 어디에 넣야하지 하고 고민하다가 `useEffect()`를 사용했는데 무한 렌더링이 발생했습니다.
+- React가 계속 상태를 업데이트하면서 끊임없이 localStorage에 저장된 `todo`들을 `state`로 계속 변경해서 추가, 삭제, 변경을 할 수 없었던 문제였습니다.
+
+#### 해결
+
+- `useEffect()`를 사용 방법을 알면 간단히 해결할 수 있는 문제였습니다.
+- `useEffect()`는 컴포넌트가 렌더링 될 때마다 특정 작업을 실행할 수 있게 해주는 리액트 훅인데, `useEffect()`가 어떻게 동작하는지 알 지 못해서 사용하지 못했었습니다.
+
+```javascript
+useEffect(() => {
+  const savedTodos = localStorage.getItem(TODOS_KEY);
+
+  if (savedTodos !== null) {
+    const parsedTodos = JSON.parse(savedTodos);
+    setTodos(parsedTodos);
+  }
+}, []);
+```
+
+> useEffect(실행하고자 하는 함수, deps)
+
+- **핵심**: 컴포넌트가 화면에 가장 처음 렌더링될 때만 함수를 실행하고 싶다면 `deps`에 빈 배열을 넣으면 된다는 것을 알게 되었습니다!
 </div>
 </details>
 
@@ -362,39 +414,7 @@ const handleToggleList = (e) => {
 </div>
 </details>
 
-<details>
-<summary><b>무한 렌더링 문제</b></summary>
-<div markdown="1">
+## 9. 회고 및 느낀점
 
-#### 원하던 동작
-
-- 로컬스토리지에 가지고 있는 todo들이 있으면 setter 함수를 이용해서 todos를 변경하려고 했습니다.
-
-#### 문제
-
-`Too many re-renders. React limits the number of renders to prevent an infinite loop.`
-
-- 처음에는 `if문`을 어디에 넣야하지 하고 고민하다가 `useEffect()`를 사용했는데 무한 렌더링이 발생했습니다.
-- React가 계속 상태를 업데이트하면서 끊임없이 localStorage에 저장된 `todo`들을 `state`로 계속 변경해서 추가, 삭제, 변경을 할 수 없었던 문제였습니다.
-
-#### 해결
-
-- `useEffect()`를 사용 방법을 알면 간단히 해결할 수 있는 문제였습니다.
-- `useEffect()`는 컴포넌트가 렌더링 될 때마다 특정 작업을 실행할 수 있게 해주는 리액트 훅인데, `useEffect()`가 어떻게 동작하는지 알 지 못해서 사용하지 못했었습니다.
-
-```javascript
-useEffect(() => {
-  const savedTodos = localStorage.getItem(TODOS_KEY);
-
-  if (savedTodos !== null) {
-    const parsedTodos = JSON.parse(savedTodos);
-    setTodos(parsedTodos);
-  }
-}, []);
-```
-
-> useEffect(실행하고자 하는 함수, deps)
-
-- **핵심**: 컴포넌트가 화면에 가장 처음 렌더링될 때만 함수를 실행하고 싶다면 `deps`에 빈 배열을 넣으면 된다는 것을 알게 되었습니다!
-</div>
-</details>
+&nbsp;나의 리액트 첫 프로젝트로 자바스크립트로 만들어봤던 **투두리스트**를 리액트로 만들어 봤다. HTML을 자바스크립트 안에서 간단하게 조작하고 만들 수 있어서 요소를 배치하고 화면을 구성하는 것은 정말 편하다고 느꼈다. 하지만 아직 리액트를 잘 알지 못해서 오히려 자바스크립트에서 쉽게 다루던 함수들을 조작하기 어려웠던 것 같다.
+&nbsp;기본적인 react의 동작과 react hooks에 대해서 조금 더 공부가 필요할 것 같다. 자바스크립트의 ES6문법도 조금 더 잘 알게 되면 더 쉽게 사용할 수 있을 것 같다.
