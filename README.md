@@ -16,13 +16,14 @@
 - [Usage](#6-usage)
 - [핵심 기능](#7-핵심-기능)
 - [Trouble Shooting](#8-trouble-shooting)
-- [회고 / 느낀점](#9-회고-및-느낀점)
+- [Update](#9-update)
+- [회고 / 느낀점](#10-회고-및-느낀점)
 
 ## 1. Description
 
 - 목적: **Todo List**를 만들면서 리액트에 익숙해지기
 - 개인 프로젝트
-- 제작 기간: 2021.01.11 ~ 2021.01.15
+- 제작 기간: 2021.01.11 ~ 2021.01.16
 
 <!-- 사용된 기술 -->
 
@@ -47,7 +48,6 @@
 
 - [x] todo 추가 기능 만들기
 - [x] todo 삭제 기능 만들기
-- [ ] todo 변경 기능 만들기
 - [x] todo 완료 처리 기능 만들기
 - [x] 새로고침 시에도 저장한 todo를 불러와서 화면에 렌더링하기
 - [x] 화면 크기에 맞춰서 반응형으로 만들기
@@ -133,40 +133,6 @@
 <div markdown="1">
 
 ![sequence](./public/imgs/sequence.png)
-
-<!-- ```mermaid
-sequenceDiagram;
-participant LocalStorage;
-participant App.js;
-participant CreateTodo.js;
-participant TodoList.js;
-
-App.js ->> LocalStorage: 저장된 todos 확인 요청;
-LocalStorage ->> App.js: todos가 있다면 전달;
-Note left of LocalStorage: todos가 있는지 확인;
-App.js ->> TodoList.js: todos를 전달;
-Note right of TodoList.js: todos를 HTML 요소로 변경;
-TodoList.js ->> App.js: 생성한 요소 전달;
-Note left of App.js: 화면에 렌더링;
-Note right of CreateTodo.js: 새로운 todo 입력;
-CreateTodo.js ->> App.js: 생성한 todo 전달;
-Note left of App.js: todos의 상태변경;
-App.js ->> LocalStorage: 변경된 todos 전달;
-Note left of LocalStorage: todos를 저장;
-App.js ->> TodoList.js: todos를 전달;
-Note right of TodoList.js: todos를 HTML 요소로 변경;
-TodoList.js ->> App.js: 생성한 요소 전달;
-Note left of App.js: 화면에 렌더링;
-TodoList.js ->> App.js: 삭제한 todo가 무엇인지 전달;
-Note right of TodoList.js: todo 삭제 요청;
-Note left of App.js: todos의 상태변경;
-App.js ->> LocalStorage: 변경된 todos 전달;
-Note left of LocalStorage: todos를 저장;
-App.js ->> TodoList.js: todos를 전달;
-Note right of TodoList.js: todos를 HTML 요소로 변경;
-TodoList.js ->> App.js: 생성한 요소 전달;
-Note left of App.js: 화면에 렌더링;
-``` -->
 
 </div>
 </details>
@@ -460,7 +426,31 @@ const handleToggleList = (e) => {
 </div>
 </details>
 
-## 9. 회고 및 느낀점
+<details>
+<summary><b>safari에서는 버튼 크기가 다르게 적용되는 문제</b></summary>
+<div markdown="1">
+
+#### 문제
+
+삭제 버튼이 safari에서는 크롬만큼 높이가 적용되지 않아서 비율이 이상했다.
+
+#### 해결
+
+- `line-height` 속성을 조정해서 해결
+  폰트가 가지고 있는 `line-height`를 크롬과 사파리가 다르게 화면에 보여준다는 것을 알게되었다.
+
+</div>
+</details>
+
+## 9. Update
+
+- 2021.01.16
+
+1. 모바일 환경에서 scroll이 되던 현상 없앰
+2. todo 개수를 8개까지만 허용했던 것을 제거하고 스크롤을 할 수 있게 만듬
+3. 밑에 todo를 제출하는 form을 화면 크기에 따라 변경되도록 만듬
+
+## 10. 회고 및 느낀점
 
 &nbsp;나의 리액트 첫 프로젝트로 자바스크립트로 만들어봤던 **투두리스트**를 리액트로 만들어 봤다. HTML을 자바스크립트 안에서 간단하게 조작하고 만들 수 있어서 요소를 배치하고 화면을 구성하는 것은 정말 편하다고 느꼈다. 하지만 아직 리액트를 잘 알지 못해서 오히려 자바스크립트에서 쉽게 다루던 함수들을 조작하기 어려웠던 것 같다.
 &nbsp;기본적인 react의 동작과 react hooks에 대해서 조금 더 공부가 필요할 것 같다. 자바스크립트의 ES6문법도 조금 더 잘 알게 되면 더 쉽게 사용할 수 있을 것 같다.

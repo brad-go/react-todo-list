@@ -18,11 +18,7 @@ function App() {
 
   // 새로 작성한 todo를 todos배열에 삽입시켜주는 함수
   const handleSubmit = (newTodo) => {
-    if (todos.length <= 7) {
-      setTodos([...todos, newTodo]);
-    } else {
-      alert('할 일이 너무 많네요! 먼저 할 일을 끝낸 후 새로 추가해주세요.');
-    }
+    setTodos([...todos, newTodo]);
   }
 
   // 첫 렌더링 시에만 로컬스토리지에 아이템들이 있는지 확인하고 있다면 todos를 업데이트 해준다. 
@@ -37,9 +33,7 @@ function App() {
 
   // 입력한 todo들을 로컬스토리지에 저장해서 기억하게 함
   useEffect(() => {
-    if (todos.length <= 8) {
-      localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
-    }
+    localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
   }, [todos])
 
   return (

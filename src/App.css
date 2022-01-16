@@ -7,6 +7,8 @@
   border-radius: 10px;
   background-color: #f4f1de;
   background-color: white;
+  overflow-y: scroll;
+  z-index: 2;
 }
 
 .app-title {
@@ -20,6 +22,7 @@
   text-align: center;
   color: white;
   transform: translateX(-50%);
+  z-index: -2;
 }
 
 /* css for list that show us todos */
@@ -42,7 +45,7 @@ li[class^="todo-list__items"] {
   width: 85%;
   margin: 5px 10px;
   padding: 10px;
-  padding-left: 20px;
+  padding-left: 30px;
   border-radius: 5px;
   color: white;
   font-size: 18px;
@@ -84,58 +87,35 @@ li[class^="todo-list__items"] {
 }
 
 .todo-list__btns {
+  padding: 5px 5px;
   background: white;
   border: none;
   border-radius: 2px;
-  z-index: 10;
+  line-height: 15px;
   transition: 0.1s ease-in;
+  z-index: 10;
 }
 
 .todo-list__btns:hover {
   transform: scale(120%);
 }
 
-@media screen and (min-width: 320px) {
-  .container {
-    width: 70%;
-  }
-  .app-title {
-    width: 50vw;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 50%;
-  }
-  .app-title {
-    width: 40vw;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    width: 40%;
-  }
-  .app-title {
-    width: 30vw;
-  }
-}
-
 /* css for form that can help us to create todos */
 
 .todo-create {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  bottom: 20px;
+  bottom: 7vh;
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 220px;
   padding: 5px;
   border: 2px solid #3d405b;
   border-radius: 5px;
+  background-color: white;
   text-align: center;
   transform: translateX(-50%);
+  z-index: 5;
 }
 
 .todo-create__input {
@@ -170,4 +150,42 @@ li[class^="todo-list__items"] {
 
 .todo-create__btn:active {
   background-color: #f2cc8f;
+}
+
+/* flexible */
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 70%;
+  }
+  .app-title {
+    width: 50vw;
+  }
+  .todo-create {
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  .app-title {
+    width: 40vw;
+  }
+  .todo-create {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 40%;
+  }
+  .app-title {
+    width: 30vw;
+  }
+  .todo-create {
+    width: 400px;
+  }
 }
